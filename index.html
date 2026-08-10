@@ -240,6 +240,7 @@ svg text{font-family:inherit}
     <a href="#a1" data-nav="a1">附錄一 NVIDIA DGX 預製資料中心</a>
     <a href="#a2" data-nav="a2">附錄二 西門子燃氣發電機</a>
     <a href="#p3" data-nav="p3">附錄三 促參法補助</a>
+    <a href="#a4" data-nav="a4">附錄四 AIDC 選址評估</a>
   </nav>
   <div class="meta">基準：2026/07/31 研討會</div>
 </div>
@@ -345,6 +346,14 @@ svg text{font-family:inherit}
         <div class="pc-flags"><span class="chip amber">10 頁</span><span class="chip coral">&sect;36 不適用</span></div>
         <div class="pc-go">進入 &rarr;</div>
       </a>
+      <a class="part-card c2" href="#a4-1">
+        <svg class="pc-icon" width="30" height="30" viewBox="0 0 30 30"><path d="M3 23h24M6 20l6-7 5 3 7-9" stroke="#1BB1BF" stroke-width="2.4" fill="none"/><circle cx="6" cy="20" r="2" fill="#1BB1BF"/><circle cx="12" cy="13" r="2" fill="#1BB1BF"/><circle cx="17" cy="16" r="2" fill="#1BB1BF"/><circle cx="24" cy="7" r="2" fill="#1BB1BF"/></svg>
+        <div class="pc-eyebrow">附錄四</div>
+        <h2>AIDC 選址評估</h2>
+        <p>從「哪一段電網還接得上」出發，將併網、土地、能效、光纖與水源收斂成可執行的場址初評。</p>
+        <div class="pc-flags"><span class="chip teal">4 頁</span><span class="chip grey">業務檢查表</span></div>
+        <div class="pc-go">進入 &rarr;</div>
+      </a>
     </div>
 
     <div class="toc">
@@ -412,6 +421,13 @@ svg text{font-family:inherit}
         <a href="#p3-8"><span class="no">3.8</span>「申請人須自購 GPU」非法規明文</a>
         <a href="#p3-9"><span class="no">3.9</span>55 分是整份報告的總分</a>
         <a href="#p3-10"><span class="no">3.10</span>首波三家申請、兩家通過</a>
+      </div>
+      <div class="card teal">
+        <h3>附錄四 &middot; AIDC 選址評估</h3>
+        <a href="#a4-1"><span class="no">4.1</span>選址不是找便宜土地，是找還接得上的電網</a>
+        <a href="#a4-2"><span class="no">4.2</span>併網是硬門檻：先問有沒有電</a>
+        <a href="#a4-3"><span class="no">4.3</span>台灣版六項評估矩陣</a>
+        <a href="#a4-4"><span class="no">4.4</span>業務開發 30 分鐘場址初評表</a>
       </div>
     </div>
 
@@ -3244,6 +3260,30 @@ svg text{font-family:inherit}
 </div>
 
 
+<!-- ================= 附錄四 : AIDC 選址評估 ================= -->
+<div class="view" id="view-a4">
+<section class="slide">
+  <div class="slide-header"><div><div class="eyebrow">附錄四 · AIDC 選址評估</div><h1>台灣選址不是找「最好蓋的地」，而是找「電網還接得上的地」</h1><p class="sub">土地、稅制與法規在島內差異有限；真正拉開場址可行性的，是併網區位、可取得土地型態與客戶延遲需求。對投資人，選址就是先把不可逆的硬約束排除。</p></div><div class="flags"><span class="flag teal">投資者優先</span><span class="flag blue">台灣在地化框架</span></div></div>
+  <div class="slide-body"><div class="two-col" style="grid-template-columns:1.25fr .95fr;gap:18px"><div class="fig" style="padding:0;overflow:hidden;min-height:348px;background:#0b2943"><img src="assets/aidc-site-screening-v1.png" alt="AIDC 場址與變電所選址情境圖" style="display:block;width:100%;height:348px;object-fit:cover"></div><div class="card" style="display:flex;flex-direction:column;justify-content:center;border-top:4px solid #1BB1BF"><div class="eyebrow" style="margin-bottom:8px">核心判斷</div><h2 style="font-size:25px;line-height:1.25;margin:0 0 12px">「有電的地」比「有地」更稀缺</h2><p>大型 AIDC 需走 <b>69kV 以上輸電系統</b>；中壓單線約僅 5–10MW。變電所與饋線容量，先於土地單價決定案子能不能成立。</p><div class="metric teal" style="margin-top:12px"><div class="k">6 / 12</div><div class="t">台灣版權重：能源供應 6、土地審批 2、光纖 2、在運負載 1、稅收 0、水資源 1。</div></div><div class="note" style="margin-top:10px">本頁視覺為選址情境示意；權重為本知識庫內部評估框架，非 BNEF 官方評分。</div></div></div><div class="table-wrap" style="margin-top:16px"><table><thead><tr><th>第一性問題</th><th>場址初篩應讀的證據</th><th>決策含義</th></tr></thead><tbody><tr><td><b>併網能否落地？</b></td><td>台電同意核供函、距變電所／饋線、電壓等級、預定供電時程</td><td><b>硬門檻</b>；無法取得供電條件，不進下一輪</td></tr><tr><td><b>土地能否承接？</b></td><td>分區、園區身分、面積與擴充、環評／水保適用性、地主結構</td><td>土地不是瓶頸；<b>有電土地</b>才是</td></tr><tr><td><b>客戶能否使用？</b></td><td>雙路光纖、IXP／海纜連結、延遲、產業聚落與雲區域</td><td>適合低延遲、貼近製造業的託管與企業自用 AIDC</td></tr><tr><td><b>營運能否持續？</b></td><td>PUE 設計、水源與備援、綠電路徑、枯水期與社區風險</td><td>把能效與水資源提前放進盡職調查</td></tr></tbody></table></div></div>
+  <div class="slide-foot"><div>來源：AIDC 選址評估知識庫 #001；情境圖為 AI 生成示意</div><div class="pageno">附四.1</div></div>
+</section>
+<section class="slide">
+  <div class="slide-header"><div><div class="eyebrow">附錄四 · 併網硬門檻</div><h1>先問「有沒有電」，再問「能蓋多大」</h1><p class="sub">79 件輸電級資料中心申請、4,758MW 的意向，不等於可運轉容量。對外說明市場時，應以已送電與施工中的約 870.5MW 為可作業量級，而非 3GW 核准名義容量。</p></div><div class="flags"><span class="flag coral">選址第一道門</span><span class="flag blue">已查證數據</span></div></div>
+  <div class="slide-body"><div class="fig"><div class="figtitle">AIDC 場址的併網決策閘門</div><svg viewBox="0 0 1180 250" role="img" aria-label="AIDC 併網選址流程圖"><defs><marker id="a4ar" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="#9FB1C0"/></marker></defs><g font-family="Arial, Microsoft JhengHei, sans-serif" text-anchor="middle"><g><rect x="24" y="64" width="190" height="92" rx="8" fill="#E8F1F9" stroke="#1968AD" stroke-width="2"/><text x="119" y="98" font-size="17" font-weight="800" fill="#12293D">① 需求與規模</text><text x="119" y="124" font-size="13" fill="#5B7285">MW、分期、商轉日</text></g><g><rect x="258" y="64" width="190" height="92" rx="8" fill="#E2F5F7" stroke="#1BB1BF" stroke-width="2"/><text x="353" y="98" font-size="17" font-weight="800" fill="#12293D">② 輸電接入</text><text x="353" y="124" font-size="13" fill="#5B7285">69kV 以上＋變電所</text></g><g><rect x="492" y="64" width="190" height="92" rx="8" fill="#FCF2DE" stroke="#E09A2B" stroke-width="2"/><text x="587" y="98" font-size="17" font-weight="800" fill="#12293D">③ 核供條件</text><text x="587" y="124" font-size="13" fill="#5B7285">取得台電同意核供函</text></g><g><rect x="726" y="64" width="190" height="92" rx="8" fill="#FBEAE5" stroke="#D95F45" stroke-width="2"/><text x="821" y="98" font-size="17" font-weight="800" fill="#12293D">④ 北部特例</text><text x="821" y="124" font-size="13" fill="#5B7285">5MW+ 審查與電源點條件</text></g><g><rect x="960" y="64" width="190" height="92" rx="8" fill="#12293D"/><text x="1055" y="98" font-size="17" font-weight="800" fill="#fff">⑤ 能源審查</text><text x="1055" y="124" font-size="13" fill="#CFE3F4">能源種類、數量、區位、能效</text></g><g stroke="#9FB1C0" stroke-width="2.5" marker-end="url(#a4ar)"><path d="M216 110h34"/><path d="M450 110h34"/><path d="M684 110h34"/><path d="M918 110h34"/></g><text x="587" y="202" font-size="14" font-weight="800" fill="#D95F45">核供函是能源使用說明書審查的前置條件；未取得前，土地不能被稱為可開發 AIDC 場址。</text><text x="587" y="226" font-size="12.5" fill="#5B7285">北部鬆綁不是全面解禁：大潭、協和電廠附近約 2 公里為原則，並具前提條件。</text></g></svg></div><div class="two-col" style="grid-template-columns:1.2fr .8fr;gap:16px;margin-top:14px"><div class="table-wrap"><table><thead><tr><th>輸電級申請狀態（2025/11）</th><th>件數</th><th>容量</th></tr></thead><tbody><tr><td>累積申請</td><td>79 件</td><td>約 4,758MW</td></tr><tr><td>同意核供</td><td>40 件</td><td>約 3,033MW</td></tr><tr><td>不同意</td><td>39 件</td><td>約 1,725MW</td></tr><tr><td>實際送電</td><td>4 戶</td><td>約 303.5MW</td></tr><tr><td>施工中、已核定</td><td>5 戶</td><td>約 567MW</td></tr></tbody></table></div><div class="card coral"><h3>避免把名義核准當成落地容量</h3><p>同意案件中，超過 7 成因逾期未辦正式用電申請而作廢。市場簡報應把「已送電＋施工中」約 <b>870.5MW</b> 作為較接近實際的量級。</p><p class="note">資料為知識庫列示之台電統計與整理；實際案址仍須逐案向台電確認。</p></div></div></div>
+  <div class="slide-foot"><div>來源：AIDC 選址評估知識庫 #001；台電輸電級資料中心申請統計（知識庫引述）</div><div class="pageno">附四.2</div></div>
+</section>
+<section class="slide">
+  <div class="slide-header"><div><div class="eyebrow">附錄四 · 台灣版評估矩陣</div><h1>沿用五大支柱，但把台灣的權重重排</h1><p class="sub">BNEF 的市場比較權重不能直接拿來選台灣縣市。台灣境內，能源區位被放大為決定性變數；稅收幾乎不產生區位差異；水資源則必須新增為盡職調查欄位。</p></div><div class="flags"><span class="flag teal">內部評估工具</span><span class="flag grey">非 BNEF 官方分數</span></div></div>
+  <div class="slide-body"><div class="two-col" style="grid-template-columns:1.2fr .8fr;gap:18px"><div class="table-wrap"><table><thead><tr><th>支柱</th><th>BNEF 東南亞</th><th>台灣境內建議</th><th>判讀</th></tr></thead><tbody><tr><td><b>能源供應／併網區位</b></td><td>4</td><td><b style="color:#D95F45">6</b></td><td>唯一硬約束；先看電網，再看土地</td></tr><tr><td><b>土地審批</b></td><td>3</td><td><b>2</b></td><td>流程可預期，改讀為有電土地的取得難度</td></tr><tr><td><b>光纖連接</b></td><td>2</td><td><b>2</b></td><td>全島條件強，對託管型仍具客戶價值</td></tr><tr><td><b>在運負載</b></td><td>2</td><td><b>1</b></td><td>人力池與基礎條件的區位差異較小</td></tr><tr><td><b>稅收</b></td><td>1</td><td><b style="color:#9FB1C0">0</b></td><td>全島一致，選址不構成差異</td></tr><tr><td><b>水資源（新增）</b></td><td>—</td><td><b style="color:#1BB1BF">1</b></td><td>水源、備援與枯水期風險須另行盡調</td></tr></tbody></table></div><div class="fig" style="overflow:hidden;padding:0;position:relative;min-height:330px;background:#0b2943"><img src="assets/aidc-site-screening-v1.png" alt="電網與土地交會的 AIDC 選址示意" style="width:100%;height:330px;object-fit:cover;opacity:.72"><div style="position:absolute;inset:0;padding:26px;color:#fff;background:linear-gradient(90deg,rgba(10,35,58,.92),rgba(10,35,58,.2))"><div class="eyebrow" style="color:#8fd9e4">投資人判讀</div><h2 style="color:#fff;font-size:27px;line-height:1.2;margin:10px 0">最適合的需求，不是最低電價需求</h2><p style="color:#dbe9f3">台灣較適合低延遲、貼近製造業客戶的託管型與企業自用 AIDC；純算力訓練、只看電價的超大型需求，競爭力較弱。</p><div class="chip teal" style="margin-top:12px">市場定位為知識庫推論</div></div></div></div><div class="three-col" style="margin-top:16px"><div class="card"><h3>能源：先做排除</h3><p>以核供條件、輸電電壓、時程與北部限制作為紅線；不可用地不進財務模型。</p></div><div class="card teal"><h3>光纖：放大客戶價值</h3><p>14 條國際海纜、三大公有雲區域已落地；需用雙路由、IXP 與延遲實測落到案址。</p></div><div class="card amber"><h3>水與能效：預先證明</h3><p>5MW 以上資料中心納入能源使用說明書；超大型 PUE ≤1.3、主機代管 ≤1.4，水源與備援應同步驗證。</p></div></div></div>
+  <div class="slide-foot"><div>來源：AIDC 選址評估知識庫 #001；BNEF 權重為原框架，台灣建議權重為知識庫自訂</div><div class="pageno">附四.3</div></div>
+</section>
+<section class="slide">
+  <div class="slide-header"><div><div class="eyebrow">附錄四 · 業務開發檢查文件</div><h1>30 分鐘場址初評：把「看起來可以」變成可追蹤的證據清單</h1><p class="sub">此頁供業務開發、地主訪談與第一次現勘使用。每一項不是要當場回答，而是要確認：誰提供、何時提供、能否形成可驗證文件。</p></div><div class="flags"><span class="flag teal">可直接複用</span><span class="flag coral">Go / Hold / Stop</span></div></div>
+  <div class="slide-body"><div class="four-col" style="gap:12px"><div class="card" style="border-top:4px solid #D95F45"><h3>① 併網與電力</h3><p>□ 目標 MW／分期／商轉日<br>□ 台電同意核供函狀態<br>□ 最近變電所、饋線與電壓等級<br>□ 69kV 以上接入可行性<br>□ 北部 5MW+ 條件／電源點距離<br>□ 綠電、自備電源與儲能路徑</p></div><div class="card" style="border-top:4px solid #1968AD"><h3>② 土地與審批</h3><p>□ 所有權、出租年限、地主結構<br>□ 使用分區／工業或園區身分<br>□ 面積、形狀、擴充與施工動線<br>□ 現況使用、拆遷與地役<br>□ 環評／水保適用性逐案確認<br>□ 社區、交通與地方溝通風險</p></div><div class="card" style="border-top:4px solid #E09A2B"><h3>③ 能效與水</h3><p>□ 雲端型 PUE ≤1.3／託管 ≤1.4<br>□ 冷卻方式與尖峰設計<br>□ 取水來源、容量與備援<br>□ 枯水期、停灌與水權風險<br>□ 能源使用說明書適用性<br>□ 再生能源義務與取得方案</p></div><div class="card" style="border-top:4px solid #1BB1BF"><h3>④ 光纖與市場</h3><p>□ 至少雙路光纖路由與進線空間<br>□ IXP、海纜／雲區域接近性<br>□ 目標客戶延遲與韌性需求<br>□ 工業聚落／算力需求來源<br>□ 既有案場與競合位置<br>□ 客戶預租、時程與容量意向</p></div></div><div class="table-wrap" style="margin-top:15px"><table><thead><tr><th style="width:16%">初評結果</th><th>可進入下一步的最低證據</th><th style="width:26%">業務行動</th></tr></thead><tbody><tr><td><span class="chip teal">GO</span> 可建檔</td><td>已有核供函或具名且可追蹤的併網程序；土地、分區、面積與擴充可初步對上</td><td>建立地籍／分區圖、排現勘、做概念配置與客戶訪談</td></tr><tr><td><span class="chip amber">HOLD</span> 補件</td><td>電力、用地、水、光纖任一關鍵資料未證實，但存在可查證路徑</td><td>列出缺件、責任人與期限；未補齊前不放入投資報酬模型</td></tr><tr><td><span class="chip coral">STOP</span> 暫停</td><td>無可擴充併網可能、使用分區明顯不符，或審批／水源風險無可行解法</td><td>保留排除原因與版本日期，轉入備選地清單</td></tr></tbody></table></div><div class="note" style="margin-top:10px"><b>現勘紀錄欄：</b>案名＿＿＿＿＿　日期＿＿＿＿＿　地點＿＿＿＿＿　負責人＿＿＿＿＿　初評：□ GO　□ HOLD　□ STOP　下一步／缺件＿＿＿＿＿＿＿＿＿＿</div></div>
+  <div class="slide-foot"><div>來源：AIDC 選址評估知識庫 #001「David 行動方案」與待辦行動池；業務初評版</div><div class="pageno">附四.4</div></div>
+</section>
+</div>
+
 <div class="deckbar" id="deckbar">
   <div class="progress"><div class="fill" id="progressFill"></div></div>
   <div class="hint">← → 換頁 ‧ Home 回封面 ‧ F 全螢幕</div>
@@ -3263,11 +3303,12 @@ svg text{font-family:inherit}
     p4: [].slice.call(document.querySelectorAll('#view-p4 .slide')),
     p5: [].slice.call(document.querySelectorAll('#view-p5 .slide')),
     a1: [].slice.call(document.querySelectorAll('#view-a1 .slide')),
-    a2: [].slice.call(document.querySelectorAll('#view-a2 .slide'))
+    a2: [].slice.call(document.querySelectorAll('#view-a2 .slide')),
+    a4: [].slice.call(document.querySelectorAll('#view-a4 .slide'))
   };
-  var order = ['p1','p2','p4','p5','a1','a2','p3'];
+  var order = ['p1','p2','p4','p5','a1','a2','p3','a4'];
   var state = { view:'home', idx:0 };
-  var last = { p1:0, p2:0, p3:0, p4:0, p5:0, a1:0, a2:0 };
+  var last = { p1:0, p2:0, p3:0, p4:0, p5:0, a1:0, a2:0, a4:0 };
   var views = {
     home: document.getElementById('view-home'),
     p1: document.getElementById('view-p1'),
@@ -3276,7 +3317,8 @@ svg text{font-family:inherit}
     p4: document.getElementById('view-p4'),
     p5: document.getElementById('view-p5'),
     a1: document.getElementById('view-a1'),
-    a2: document.getElementById('view-a2')
+    a2: document.getElementById('view-a2'),
+    a4: document.getElementById('view-a4')
   };
   var deckbar = document.getElementById('deckbar');
   var fill = document.getElementById('progressFill');
@@ -3304,7 +3346,7 @@ svg text{font-family:inherit}
   function goHash(hash){
     hash = (hash||'#home').replace('#','');
     if(hash==='home'||hash===''){ state.view='home'; render(); return; }
-    var m = hash.match(/^(p1|p2|p3|p4|p5|a1|a2)-(\d+)$/);
+    var m = hash.match(/^(p1|p2|p3|p4|p5|a1|a2|a4)-(\d+)$/);
     if(m){
       var v=m[1], i=parseInt(m[2],10)-1;
       if(parts[v][i]){ state.view=v; state.idx=i; render(); return; }

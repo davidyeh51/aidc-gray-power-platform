@@ -361,7 +361,7 @@ svg text{font-family:inherit}
         <a href="#p2-1"><span class="no">2.1</span>法源依據：AI 新十大建設</a>
         <a href="#p2-2"><span class="no">2.2</span>四分之三的資料中心擠在北部</a>
         <a href="#p2-3"><span class="no">2.3</span>核准 3,033MW，實際送電 303.5MW</a>
-        <a href="#p2-4"><span class="no">2.4</span>2026–2035 年均用電需求成長 2.5%</a>
+        <a href="#p2-4"><span class="no">2.4</span>AIDC 已納入十年模型：2.5% 年均成長</a>
         <a href="#p2-5"><span class="no">2.5</span>台北新北自給率只有 51%</a>
         <a href="#p2-6"><span class="no">2.6</span>5MW 禁令鬆動與政策三訊號</a>
         <a href="#p2-7"><span class="no">2.7</span>結論：如何擠進落地的那三成</a>
@@ -1072,50 +1072,54 @@ svg text{font-family:inherit}
 <section class="slide">
   <div class="slide-header">
     <div>
-      <div class="eyebrow">Part 2 · 電力需求</div>
-      <h1>2025 年用電量小幅下降；2026–2035 年需求年均成長率為 2.5%</h1>
-      <p class="sub">短期實績與長期預測必須分開看。最新版官方報告已把 AI 資料中心、半導體擴產、氣溫與深度節能一併納入需求評估。</p>
+      <div class="eyebrow">Part 2 · AIDC 十年電力背景</div>
+      <h1>經濟部已把 AI 資料中心與半導體，寫進歷年次高的十年用電預測</h1>
+      <p class="sub">這不是產業自行喊出的需求情境。114 年度《全國電力資源供需報告》明載：半導體擴廠、AI 資料中心用電、氣溫與深度節能，都是 2026–2035 年需求預測的共同輸入；因此新設與既有用電提高申請將顯著增加。</p>
     </div>
-    <div class="flags"><span class="flag blue">114 年度官方報告</span><span class="flag coral">2026/06/18 公布</span></div>
+    <div class="flags"><span class="flag coral">AIDC 已納入國家模型</span><span class="flag blue">歷年次高預測*</span></div>
   </div>
   <div class="slide-body">
-    <div class="two-col">
+    <div class="four-col">
+      <div class="metric coral"><div class="k">2.5%</div><div class="t">2026–2035 年全國用電需求年均成長率<br><b>AI 資料中心已列入模型</b></div></div>
+      <div class="metric amber"><div class="k">+0.8pp</div><div class="t">較 113 年度報告的 1.7% 上修<br><b>十年需求基準已改變</b></div></div>
+      <div class="metric teal"><div class="k">2.7%</div><div class="t">2026–2035 年夜尖峰負載年均成長率<br><b>直接牽動 AIDC MW 規劃</b></div></div>
+      <div class="metric blue"><div class="k">47,948 MW</div><div class="t">2035 年夜尖峰負載預測<br><b>較 2025 年增加 11,060 MW</b></div></div>
+    </div>
+    <div class="two-col" style="margin-top:14px">
       <div class="fig">
-        <div class="figtitle">全國電力消費量：2025 實績</div>
-        <svg viewBox="0 0 520 280" role="img" aria-label="2024與2025年全國電力消費量比較">
-          <line x1="60" y1="228" x2="500" y2="228" stroke="#D9E3EC" stroke-width="2"/>
-          <rect x="105" y="76" width="112" height="152" fill="#1968AD"/>
-          <text x="161" y="64" font-size="18" font-weight="800" fill="#1968AD" text-anchor="middle">2,838.5</text>
-          <text x="161" y="250" font-size="13" font-weight="700" fill="#5B7285" text-anchor="middle">2024 年</text>
-          <rect x="305" y="80" width="112" height="148" fill="#E09A2B"/>
-          <text x="361" y="68" font-size="18" font-weight="800" fill="#C57F14" text-anchor="middle">2,830.1</text>
-          <text x="361" y="250" font-size="13" font-weight="700" fill="#5B7285" text-anchor="middle">2025 年</text>
-          <path d="M220 105 H296" stroke="#D95F45" stroke-width="2.5" marker-end="url(#demandArrow)"/>
-          <text x="258" y="94" font-size="14" font-weight="800" fill="#B4432C" text-anchor="middle">−8.4 億度</text>
-          <text x="258" y="116" font-size="13" font-weight="800" fill="#B4432C" text-anchor="middle">−0.30%</text>
-          <defs><marker id="demandArrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#D95F45"/></marker></defs>
-          <text x="60" y="274" font-size="11.5" fill="#5B7285">單位：億度；全國電力消費量，含台電系統總售電量及自用發電設備自用電量</text>
+        <div class="figtitle">AIDC 所在的系統背景：夜尖峰負載將從 36,888 MW 走向 47,948 MW</div>
+        <svg viewBox="0 0 720 310" role="img" aria-label="2025到2035夜尖峰負載預測">
+          <defs><linearGradient id="aidcGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1BB1BF" stop-opacity=".32"/><stop offset="100%" stop-color="#1BB1BF" stop-opacity=".02"/></linearGradient><marker id="aidcArrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#D95F45"/></marker></defs>
+          <g stroke="#E3EAF0" stroke-width="1"><line x1="70" y1="64" x2="680" y2="64"/><line x1="70" y1="124" x2="680" y2="124"/><line x1="70" y1="184" x2="680" y2="184"/><line x1="70" y1="244" x2="680" y2="244"/></g>
+          <g font-size="11" fill="#7A8B99" text-anchor="end"><text x="60" y="68">48,000</text><text x="60" y="128">44,000</text><text x="60" y="188">40,000</text><text x="60" y="248">36,000 MW</text></g>
+          <path d="M94 225 L238 196 L438 128 L638 64 L638 244 L94 244 Z" fill="url(#aidcGrad)"/>
+          <path d="M94 225 L238 196 L438 128 L638 64" fill="none" stroke="#1BB1BF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          <g fill="#0C3A63"><circle cx="94" cy="225" r="7"/><circle cx="238" cy="196" r="7"/><circle cx="438" cy="128" r="7"/><circle cx="638" cy="64" r="8"/></g>
+          <g font-size="16" font-weight="900" fill="#0C3A63" text-anchor="middle"><text x="94" y="207">36,888</text><text x="238" y="178">38,840</text><text x="438" y="110">43,295</text><text x="638" y="46">47,948</text></g>
+          <g font-size="13" font-weight="800" fill="#5B7285" text-anchor="middle"><text x="94" y="274">2025 實績</text><text x="238" y="274">2026</text><text x="438" y="274">2030</text><text x="638" y="274">2035</text></g>
+          <path d="M104 292 H628" stroke="#D95F45" stroke-width="2.5" marker-end="url(#aidcArrow)"/>
+          <text x="365" y="304" font-size="13" font-weight="900" fill="#B4432C" text-anchor="middle">十年增加 11,060 MW：AIDC 要先搶的是可承諾的容量與受電日</text>
         </svg>
       </div>
       <div class="table-wrap">
         <table>
-          <thead><tr><th>114 年度《全國電力資源供需報告》</th><th class="num">官方數字</th><th>投資判讀</th></tr></thead>
+          <thead><tr><th>官方模型已告訴我們什麼</th><th class="num">十年數字</th><th>AIDC／投資案的正確解讀</th></tr></thead>
           <tbody>
-            <tr><td>2025 年全國電力消費量</td><td class="num"><b>2,830.1 億度</b></td><td>較 2024 年減少 8.4 億度（−0.30%）；不能以單一年份推論長期需求反轉。</td></tr>
-            <tr class="hl-row"><td>2026–2035 年用電需求年均成長率</td><td class="num"><b>2.5%</b></td><td>已納入 AI 資料中心、半導體擴產、氣溫與深度節能影響。</td></tr>
-            <tr><td>2026–2035 年夜尖峰負載年均成長率</td><td class="num"><b>2.7%</b></td><td>AIDC 的容量、備援與需量管理，應以夜尖峰條件設計。</td></tr>
-            <tr><td>2035 年夜尖峰負載預測</td><td class="num"><b>47,948 MW</b></td><td>為全國系統預測，不能直接換算為任一場址的可核供容量。</td></tr>
+            <tr class="hl-row"><td><b>AI 資料中心用電已列入需求輸入</b></td><td class="num"><b>2.5% CAGR</b></td><td>不用再把 AIDC 視為模型外的「額外樂觀情境」；但報告<b>未拆出單獨的 AIDC MW 額度</b>，不得自行換算市場規模。</td></tr>
+            <tr><td>夜尖峰成長快於總用電</td><td class="num"><b>2.7% CAGR</b></td><td>AI 機房的容量、備援、儲能與需量管理，應以 MW、負載曲線與夜尖峰，而非只以年用電度數評估。</td></tr>
+            <tr><td>全國夜尖峰負載</td><td class="num"><b>36,888 → 47,948 MW</b></td><td>全國系統增加 11,060 MW；資料中心若高度集中於同區，饋線與變電所的局部瓶頸會早於全國總量問題出現。</td></tr>
+            <tr><td>供給端與夜間備用容量</td><td class="num"><b>25,980 MW 燃氣新增</b><br>3,020–11,088 MW 備用</td><td>官方預估總量可維持充足；<b>不等於任何 AIDC 場址都能在目標日取得契約容量</b>。</td></tr>
           </tbody>
         </table>
       </div>
     </div>
     <div class="three-col">
-      <div class="card coral"><h3>投資基準已更新</h3><p>本案以 <b>2026–2035 年 2.5%</b> 作為全國用電需求背景，不再把前版報告的成長率比較，混入最新版官方數據口徑。</p></div>
-      <div class="card"><h3>供給端：累計新增 25,980 MW 燃氣機組</h3><p>2026–2035 年規劃新增台中、興達、大林、通霄、協和及國光、麥寮等燃氣機組，<b>累計 25,980 MW</b>（約 26.0 GW）。</p></div>
-      <div class="card amber"><h3>全國總量充裕，不等於場址可立即取得容量</h3><p>官方預估夜間備用容量於 2026–2029 年為 <b>3,020–5,056 MW</b>，2030–2035 年為 <b>6,591–11,088 MW</b>。投資案仍須逐案確認饋線、變電所、受電日與工程界面。</p></div>
+      <div class="card coral"><h3>這是一次「需求基準」的上修</h3><p>113 年度報告對 2026 前十年的年均需求估計為 <b>1.7%</b>；新版改為 <b>2.5%</b>。2.5% 本身已高於過去十年實績年均 <b>1.24%</b>，其差異的核心來源之一就是 AI 資料中心與半導體。</p></div>
+      <div class="card teal"><h3>AIDC 不是模型外需求，而是局部高密度負載</h3><p>報告把 AI 資料中心納入全國需求；經濟部也指出資料中心可落在都會區、使局部用電密度遠高於既有模式。<b>投資判斷必須由全國電量轉向區域容量。</b></p></div>
+      <div class="card amber"><h3>進能服應賣的是「把模型變成可上線容量」</h3><p>先鎖定饋線、變電所、受電日、儲能、備援、負載曲線與工程責任；再談 DGX、機櫃、液冷與租金。灰區電力平台的價值，正是把國家模型的需求增量轉成單一場址可交付的 MW。</p></div>
     </div>
   </div>
-  <div class="slide-foot"><div>來源：經濟部《114 年度全國電力資源供需報告》pp. 2、8、22、24（2026/06/18）</div><div class="pageno">2.4</div></div>
+  <div class="slide-foot"><div>來源：經濟部《114 年度全國電力資源供需報告》pp. 1、7–8、22、24；*「歷年次高」為年度預測比較之公開整理，本頁的量化數據以官方年報為準；113 年度報告 1.7% 比較見 <a href="https://mnscdn.moea.gov.tw/MNS/Populace/news/News.aspx?kind=1&amp;menu_id=40&amp;news_id=120573" target="_blank" rel="noreferrer">經濟部公告</a>；資料中心局部電網意義見 <a href="https://mnscdn.moea.gov.tw/Mns/Populace/news/News.aspx?kind=1&amp;menu_id=40&amp;news_id=121997" target="_blank" rel="noreferrer">經濟部說明</a></div><div class="pageno">2.4</div></div>
 </section>
 <!-- 1.4 -->
 <section class="slide">

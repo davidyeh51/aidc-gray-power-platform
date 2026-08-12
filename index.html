@@ -327,8 +327,8 @@ svg text{font-family:inherit}
         <svg class="pc-icon" width="30" height="30" viewBox="0 0 30 30"><rect x="2" y="8" width="26" height="15" rx="2" fill="#D95F45" opacity=".22"/><path d="M2 8h26v15H2z" stroke="#D95F45" stroke-width="2" fill="none"/><path d="M8 8v15M14 8v15M20 8v15" stroke="#D95F45" stroke-width="1.6"/></svg>
         <div class="pc-eyebrow">附錄一</div>
         <h2>NVIDIA DGX 預製資料中心</h2>
-        <p>把 DGX 算力架構、預製化電力與液冷介面，轉成可被投資人驗收的落地條件。</p>
-        <div class="pc-flags"><span class="chip coral">3 頁</span><span class="chip grey">DGX × 預製基礎設施</span></div>
+        <p>把 DGX 算力架構、SuperX 等預製化電力／冷卻模組，轉成可被投資人驗收的落地條件。</p>
+        <div class="pc-flags"><span class="chip coral">6 頁</span><span class="chip grey">DGX × SuperX × 預製基礎設施</span></div>
         <div class="pc-go">進入 &rarr;</div>
       </a>
       <a class="part-card c5" href="#a2-1">
@@ -405,6 +405,9 @@ svg text{font-family:inherit}
         <a href="#a1-1"><span class="no">1</span>DGX 算力架構與預製實體基礎設施</a>
         <a href="#a1-2"><span class="no">2</span>影片摘要：Vertiv SmartRun 的模組化亮點</a>
         <a href="#a1-3"><span class="no">3</span>Vertiv、台達、Schneider 的公開方案與選商門檻</a>
+        <a href="#a1-4"><span class="no">4</span>SuperX：預製化數據中心的 3D 模組與架構優勢</a>
+        <a href="#a1-5"><span class="no">5</span>SuperX 供電邏輯：中壓到 800VDC，再到 IT／冷卻</a>
+        <a href="#a1-6"><span class="no">6</span>SuperX 專案部署：供電與冷卻同步交付</a>
       </div>
       <div class="card">
         <h3>附錄二 &middot; 西門子燃氣發電機</h3>
@@ -2223,6 +2226,26 @@ svg text{font-family:inherit}
   <div class="slide-foot"><div>來源：<a href="https://www.vertiv.com/493c85/globalassets/documents/ai-hub-reference-design/vertiv-360ai-reference-design---rd0019.pdf" target="_blank" rel="noreferrer">Vertiv 360AI RD0019</a>；<a href="https://www.deltapowersolutions.com/en/mcis/news-2026-delta-debuts-prefa-ai-modular-data-center-at-computex-to-reduce-deployment-time-by-up-to-60percent.php" target="_blank" rel="noreferrer">Delta 2026 AI Prefab</a>；<a href="https://www.se.com/us/en/download/document/RD48DSR0_EN/" target="_blank" rel="noreferrer">Schneider RD48</a></div><div class="pageno">附一.3</div></div>
 </section>
 
+<!-- A1.4 SuperX -->
+<section class="slide">
+  <div class="slide-header"><div><div class="eyebrow">附錄一 · SuperX 預製化數據中心</div><h1>SuperX 把電力、儲能、IT、冷卻與控制系統拆成可工廠交付的積木</h1><p class="sub">SuperX Digital Power 將 MV Rectifier、Energy Vault、Power Distribution、HyperGrid、NeuroBlock IT 與 CryoPod 組成可選配模組。文件主張在工廠完成高度整合與預製，再於場址做接電、接水、組裝與調試；這是預製化基礎設施方案，不等同已解決受電、併網或場址許可。</p></div><div class="flags"><span class="flag coral">SuperX 新增</span><span class="flag blue">原廠 PDF</span></div></div>
+  <div class="slide-body"><div class="two-col" style="grid-template-columns:1.05fr .95fr;gap:18px"><div class="fig" style="padding:0;overflow:hidden;background:#f5f7f9"><img src="assets/superx-prefab-overview-p2.png" alt="SuperX 預製化數據中心 3D 模組與架構優勢" style="display:block;width:100%;height:365px;object-fit:contain"></div><div class="table-wrap"><table><thead><tr><th>SuperX 原廠主張</th><th>對 AIDC 的意義</th><th>應驗證項目</th></tr></thead><tbody><tr><td><b>90% 工廠預製</b></td><td>將供配電、冷卻、監控、消防的現場工作移至工廠。</td><td>模組邊界、FAT、運輸限制、到場 SAT 與實際工期。</td></tr><tr><td><b>全供電鏈路最高 97.5%</b></td><td>可降低轉換損耗；不等同整座資料中心 PUE。</td><td>負載區間、拓撲、測試方法與保證條件。</td></tr><tr><td><b>佔地節省最高 50%</b></td><td>提高 IT、冷卻與維修動線配置彈性。</td><td>比較基準、維修淨距、消防與法規尺寸。</td></tr><tr><td><b>支援 2N／BR／DR</b></td><td>以模組選配建立備援層級。</td><td>SLD、故障隔離、電池／柴發策略與 SLA。</td></tr></tbody></table><div class="big-callout" style="margin-top:13px"><div class="label">3D 演示的正確解讀</div><div class="answer">圖示呈現「可商品化的工廠交付單元」；如期上線仍取決於中壓受電、土建、消防、運輸吊裝、供冷水路與系統整合。</div></div></div></div></div>
+  <div class="slide-foot"><div>來源：SuperX Digital Power〈SuperX 預製化數據中心解決方案〉p.2；圖片為 PDF 原頁擷取，效能主張待專案文件確認</div><div class="pageno">附一.4</div></div>
+</section>
+
+<!-- A1.5 SuperX -->
+<section class="slide">
+  <div class="slide-header"><div><div class="eyebrow">附錄一 · SuperX 供電邏輯</div><h1>從中壓輸入到 800VDC：先集中整流，再分流至 IT 與冷卻負載</h1><p class="sub">SuperX 案例圖把中壓集裝箱、中壓整流集裝箱、800VDC 逆變器與配電集裝箱串聯；IT 與冷卻可在不同電壓層級取得電源。電壓、冗餘、保護與切換方式仍須按場址和 GPU 負載另行設計。</p></div><div class="flags"><span class="flag blue">800VDC 供電邏輯</span><span class="flag amber">方案設計基礎</span></div></div>
+  <div class="slide-body"><div class="two-col" style="grid-template-columns:1.08fr .92fr;gap:18px"><div class="fig" style="padding:0;overflow:hidden;background:#f5f7f9"><img src="assets/superx-power-deployment-p13.png" alt="SuperX 中壓、800VDC 與 IT 冷卻供電邏輯圖" style="display:block;width:100%;height:375px;object-fit:contain"></div><div style="display:flex;flex-direction:column;gap:12px"><div class="card blue"><h3>① 中壓層：接入與備援</h3><p>中壓集裝箱承接中壓輸入；文件案例列示 11kV。柴發／中壓切換可作為備援與維運切換界面。</p></div><div class="card teal"><h3>② 直流層：整流、電池與 800VDC 匯流</h3><p>中壓整流後輸出 800VDC；電池可接入直流鏈路，為高密度 IT 與快速負載變動提供短時支撐。</p></div><div class="card amber"><h3>③ 負載層：IT 與冷卻一起算</h3><p>逆變／配電模組轉為 380VAC，供 IT、泵浦、空調與建築負載使用。GPU kW 必須與 CDU、CryoPod、泵浦及備援負載一併計算。</p></div></div></div><div class="table-wrap" style="margin-top:15px"><table><thead><tr><th>供電段</th><th>SuperX 文件示例</th><th>進能服灰區工作</th></tr></thead><tbody><tr><td>中壓接入</td><td>中壓集裝箱：11kV 輸入／輸出；功率按需配置</td><td>台電核供、電壓等級、保護協調、受電站、工期與供電責任。</td></tr><tr><td>整流與直流匯流</td><td>中壓整流：11kV AC → 800VDC</td><td>效率曲線、直流保護、電池接入、故障隔離與維修旁路。</td></tr><tr><td>逆變與配電</td><td>逆變／配電：800VDC → 380VAC</td><td>IT／冷卻分路、諧波、切換、備援拓撲與責任界面。</td></tr></tbody></table></div></div>
+  <div class="slide-foot"><div>來源：SuperX Digital Power〈SuperX 預製化數據中心解決方案〉p.13；圖中電壓為原廠案例，不應直接視為本案最終設計</div><div class="pageno">附一.5</div></div>
+</section>
+
+<!-- A1.6 SuperX -->
+<section class="slide">
+  <div class="slide-header"><div><div class="eyebrow">附錄一 · SuperX 專案部署</div><h1>預製化縮短的是現場組裝；供電、冷卻與驗收必須並行管理</h1><p class="sub">SuperX 將部署拆為土建／基礎、工廠製造、運輸、快速安裝、系統整合與調試。AIDC 的中壓受電、800VDC／380VAC 配電、CDU／CryoPod、水力模組與控制系統，必須在同一個里程碑表中收斂。</p></div><div class="flags"><span class="flag teal">供電 × 冷卻</span><span class="flag coral">並行部署</span></div></div>
+  <div class="slide-body"><div class="two-col" style="grid-template-columns:1fr 1fr;gap:16px"><div class="fig" style="padding:0;overflow:hidden;background:#f5f7f9"><div class="figtitle" style="padding:8px 12px">原廠五步關鍵部署流程</div><img src="assets/superx-deployment-p14.png" alt="SuperX 預製模組五步部署流程" style="display:block;width:100%;height:260px;object-fit:contain"></div><div class="fig" style="padding:0;overflow:hidden;background:#f5f7f9"><div class="figtitle" style="padding:8px 12px">CryoPod 集成冷源箱：冷卻規格頁</div><img src="assets/superx-cryopod-p12.png" alt="SuperX CryoPod 集成冷源箱冷卻規格" style="display:block;width:100%;height:260px;object-fit:contain"></div></div><div class="table-wrap" style="margin-top:14px"><table><thead><tr><th>專案階段</th><th>供電工作包</th><th>冷卻工作包</th><th>共同驗收點</th></tr></thead><tbody><tr><td><b>設計凍結／工廠製造</b></td><td>中壓／整流／電池／逆變器 SLD、保護設定、FAT</td><td>IT 熱負載、CDU／CryoPod 選型、管路／水力計算、FAT</td><td>負載曲線、冗餘拓撲、控制介面、運輸尺寸與責任邊界。</td></tr><tr><td><b>土建／到場安裝</b></td><td>受電基礎、接地、電纜路徑、變壓器／柴發／BESS 介面</td><td>水源／補水、一次／二次側管路、排水、泵浦與季節條件</td><td>基礎、吊裝、動線、消防、監控、工期與停工風險。</td></tr><tr><td><b>系統整合／試運轉</b></td><td>空載／帶載、切換、電池支撐、故障隔離與回復</td><td>流量／壓差、供回水溫、CDU、漏液偵測與熱負載階躍</td><td>SAT、性能曲線、告警矩陣、SLA、保固起算與營運交接。</td></tr></tbody></table></div><div class="warn" style="margin-top:12px"><b>原廠 CryoPod 文件指標：</b>案例列示 800kW × 2、36℃／44℃ 進出水、87m³/h、IP55 等參數。這些是產品規格／案例條件，須以本案 GPU 熱負載、場址水源、環境條件與台灣設計規範重新選型。</div></div>
+  <div class="slide-foot"><div>來源：SuperX Digital Power〈SuperX 預製化數據中心解決方案〉p.12、p.14；圖片為 PDF 原頁擷取</div><div class="pageno">附一.6</div></div>
+</section>
 </div>
 
 <!-- ================= 附錄二 : 西門子燃氣發電機 ================= -->

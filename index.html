@@ -323,7 +323,7 @@ svg text{font-family:inherit}
         <svg class="pc-icon" width="30" height="30" viewBox="0 0 30 30"><path d="M3 15h6l3-8 6 16 3-8h6" stroke="#0C3A63" stroke-width="2.4" fill="none" stroke-linejoin="round"/></svg>
         <div class="pc-eyebrow">PART 4</div>
         <h2>算力中心架構</h2>
-        <p>白區與灰區的 800 VDC 架構、設施側四階段演進、負載擺盪與併網瓶頸，以及模組化交付。</p>
+        <p>白區與灰區的 800 VDC 架構、AC／DC 共存的 A／B／C 部署選項、負載擺盪與併網瓶頸，以及模組化交付。</p>
         <div class="pc-flags"><span class="chip blue">6 頁</span><span class="chip coral">白區／灰區</span><span class="chip grey">NVIDIA 白皮書</span></div>
         <div class="pc-go">進入 &rarr;</div>
       </a>
@@ -398,7 +398,7 @@ svg text{font-family:inherit}
       <div class="card">
         <h3>PART 4 &middot; 算力中心架構</h3>
         <a href="#p4-1"><span class="no">4.1</span>800 VDC 架構（白區）：機櫃側</a>
-        <a href="#p4-2"><span class="no">4.2</span>800 VDC 架構（灰區）：設施側四階段</a>
+        <a href="#p4-2"><span class="no">4.2</span>800 VDC 架構（灰區）：AC／DC 共存的部署選項</a>
         <a href="#p4-3"><span class="no">4.3</span>白區／灰區分界線正在移動</a>
         <a href="#p4-4"><span class="no">4.4</span>負載擺盪、雙層儲能與併網瓶頸</a>
         <a href="#p4-5"><span class="no">4.5</span>既有機房的儲能改造</a>
@@ -1475,98 +1475,35 @@ svg text{font-family:inherit}
   <div class="slide-header">
     <div>
       <div class="eyebrow">Part 4 · 800 VDC 架構（灰區）</div>
-      <h1>設施側四階段：低壓交流那一層，會一路縮到消失</h1>
-      <p class="sub">每往下一階，低壓 AC 段就短一截。最後一階把 35 kV 中壓直接轉成 800 VDC，整層低壓交流不見了——但那是 3–5 年後的事。</p>
+      <h1>不是四階段淘汰：800 VDC 是 AC／DC 共存下的四種部署選項</h1>
+      <p class="sub">NVIDIA V2 白皮書已把設施側從線性「演進階段」改為可依既有設施、時程與功率密度選擇的 Existing／Option A／B／C。800 VDC 的近期目標是 GPU Compute 負載；既有 480 VAC DSX 架構仍是基準方案，並不會被一次取代。</p>
     </div>
-    <div class="flags"><span class="flag blue">NVIDIA 白皮書 Fig.10</span><span class="flag coral">第 4 階＝3–5 年</span></div>
+    <div class="flags"><span class="flag blue">NVIDIA V2 · 2026</span><span class="flag teal">AC／DC 共存</span><span class="flag coral">MV Direct 是遠期路線</span></div>
   </div>
   <div class="slide-body">
-    <div class="fig">
-      <div class="figtitle">資料中心電力架構的四階段演進（設施側）</div>
-      <svg viewBox="0 0 1160 400" role="img" aria-label="設施側四階段演進">
-        <g font-size="11.5" font-weight="700" fill="#5B7285" text-anchor="middle">
-          <text x="340" y="20">進線</text><text x="620" y="20">低壓交流段（AC）</text><text x="905" y="20">直流段（DC）</text><text x="1085" y="20">機櫃</text>
-        </g>
-
-        <!-- Row 1 -->
-        <text x="16" y="52" font-size="13.5" font-weight="800" fill="#B4432C">① 現況　415 VAC</text>
-        <text x="16" y="70" font-size="11" fill="#9FB1C0">Today</text>
-        <rect x="180" y="36" width="120" height="44" fill="#fff" stroke="#9FB1C0"/><text x="240" y="63" font-size="12" font-weight="700" fill="#12293D" text-anchor="middle">市電 ＋ 柴油機</text>
-        <rect x="304" y="36" width="86" height="44" fill="#EDF1F5" stroke="#9FB1C0"/><text x="347" y="63" font-size="11.5" font-weight="700" fill="#5B7285" text-anchor="middle">MV Network</text>
-        <rect x="394" y="36" width="620" height="44" fill="#F7DDD6" stroke="#D95F45"/>
-        <text x="704" y="56" font-size="12.5" font-weight="700" fill="#B4432C" text-anchor="middle">LV MSB → LVAC UPS → PDU → AC Dist</text>
-        <text x="704" y="73" font-size="11" fill="#B4432C" text-anchor="middle">480 VAC ▸ 415 VAC　｜　儲能為選配</text>
-        <rect x="1018" y="36" width="126" height="44" fill="#fff" stroke="#9FB1C0"/><text x="1081" y="56" font-size="11.5" font-weight="700" fill="#12293D" text-anchor="middle">PSU 內建</text><text x="1081" y="72" font-size="11" fill="#5B7285" text-anchor="middle">415 VAC → 54 VDC</text>
-
-        <!-- Row 2 -->
-        <text x="16" y="132" font-size="13.5" font-weight="800" fill="#C57F14">② 白區改造</text>
-        <text x="16" y="150" font-size="11" fill="#9FB1C0">White Space Retrofit</text>
-        <rect x="180" y="116" width="120" height="44" fill="#fff" stroke="#9FB1C0"/><text x="240" y="143" font-size="12" font-weight="700" fill="#12293D" text-anchor="middle">市電 ＋ 柴油機</text>
-        <rect x="304" y="116" width="86" height="44" fill="#EDF1F5" stroke="#9FB1C0"/><text x="347" y="143" font-size="11.5" font-weight="700" fill="#5B7285" text-anchor="middle">MV Network</text>
-        <rect x="394" y="116" width="320" height="44" fill="#F7DDD6" stroke="#D95F45"/>
-        <text x="554" y="143" font-size="12.5" font-weight="700" fill="#B4432C" text-anchor="middle">LV MSB → LVAC UPS</text>
-        <rect x="718" y="116" width="296" height="44" fill="#FCE3C8" stroke="#E09A2B"/>
-        <text x="866" y="136" font-size="12.5" font-weight="700" fill="#C57F14" text-anchor="middle">LV Rectifier → DC Dist</text>
-        <text x="866" y="153" font-size="11" fill="#C57F14" text-anchor="middle">800 VDC　＋　Energy Storage</text>
-        <rect x="1018" y="116" width="126" height="44" fill="#E8F1F9" stroke="#1968AD"/><text x="1081" y="143" font-size="12" font-weight="800" fill="#1968AD" text-anchor="middle">800 VDC 進櫃</text>
-
-        <!-- Row 3 -->
-        <text x="16" y="212" font-size="13.5" font-weight="800" fill="#12818C">③ 混合配電</text>
-        <text x="16" y="230" font-size="11" fill="#9FB1C0">Hybrid Power Distribution</text>
-        <rect x="180" y="196" width="120" height="44" fill="#E2F5F7" stroke="#1BB1BF"/><text x="240" y="216" font-size="11.5" font-weight="700" fill="#12818C" text-anchor="middle">市電＋現地發電</text><text x="240" y="232" font-size="11.5" font-weight="700" fill="#12818C" text-anchor="middle">＋ BESS</text>
-        <rect x="304" y="196" width="86" height="44" fill="#EDF1F5" stroke="#9FB1C0"/><text x="347" y="223" font-size="11.5" font-weight="700" fill="#5B7285" text-anchor="middle">MV Network</text>
-        <rect x="394" y="196" width="150" height="44" fill="#F7DDD6" stroke="#D95F45"/>
-        <text x="469" y="223" font-size="12.5" font-weight="700" fill="#B4432C" text-anchor="middle">LV MSB</text>
-        <rect x="548" y="196" width="466" height="44" fill="#FBF4C0" stroke="#C9B037"/>
-        <text x="781" y="216" font-size="12.5" font-weight="700" fill="#8A7517" text-anchor="middle">LV Rectifier → DC Dist　＋　Energy Storage</text>
-        <text x="781" y="233" font-size="11" fill="#8A7517" text-anchor="middle">集中式 AC UPS 已移除</text>
-        <rect x="1018" y="196" width="126" height="44" fill="#E8F1F9" stroke="#1968AD"/><text x="1081" y="223" font-size="12" font-weight="800" fill="#1968AD" text-anchor="middle">800 VDC 進櫃</text>
-
-        <!-- Row 4 -->
-        <text x="16" y="292" font-size="13.5" font-weight="800" fill="#2C7A54">④ 中壓直轉</text>
-        <text x="16" y="310" font-size="11" fill="#9FB1C0">MV to 800 VDC</text>
-        <rect x="180" y="276" width="120" height="44" fill="#E2F5F7" stroke="#1BB1BF"/><text x="240" y="296" font-size="11.5" font-weight="700" fill="#12818C" text-anchor="middle">市電＋現地發電</text><text x="240" y="312" font-size="11.5" font-weight="700" fill="#12818C" text-anchor="middle">＋ BESS</text>
-        <rect x="304" y="276" width="86" height="44" fill="#EDF1F5" stroke="#9FB1C0"/><text x="347" y="303" font-size="11.5" font-weight="700" fill="#5B7285" text-anchor="middle">MV Network</text>
-        <rect x="394" y="276" width="620" height="44" fill="#DCEFE0" stroke="#3C9D6E" stroke-width="2"/>
-        <text x="704" y="296" font-size="12.5" font-weight="800" fill="#2C7A54" text-anchor="middle">MV Rectifier 或 SST（13.8–35 kVAC → 800 VDC）→ DC Dist ＋ Energy Storage</text>
-        <text x="704" y="313" font-size="11" fill="#2C7A54" text-anchor="middle">整層低壓交流消失</text>
-        <rect x="1018" y="276" width="126" height="44" fill="#E8F1F9" stroke="#1968AD"/><text x="1081" y="303" font-size="12" font-weight="800" fill="#1968AD" text-anchor="middle">800 VDC 進櫃</text>
-
-        <path d="M394 88 V108 M394 168 V188 M394 248 V268" stroke="#9FB1C0" stroke-width="1.5" stroke-dasharray="4 3"/>
-        <path d="M1014 88 L718 108 M1014 168 L548 188 M1014 248 L394 268" stroke="#D95F45" stroke-width="1.5" stroke-dasharray="4 3" opacity=".55"/>
-        <rect x="16" y="340" width="1128" height="46" fill="#FCF2DE" stroke="#E09A2B"/>
-        <text x="30" y="360" font-size="13" font-weight="800" fill="#C57F14">紅色區塊（低壓交流段）每往下一階就短一截，第 ④ 階完全消失——這就是整張圖要說的事。</text>
-        <text x="30" y="378" font-size="12" fill="#12293D">同時，現地發電與 BESS 從「選配」變成架構的一部分：第 ③ 階起，它們直接接在中壓母線上，不再是柴油機那種只在停電時才動的角色。</text>
-      </svg>
-      <div class="cap">依 NVIDIA《800 VDC Architecture for Next-Generation AI Infrastructure》Figure 10 重繪並簡化</div>
-    </div>
-    <div class="split-60">
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th style="width:14%">階段</th><th style="width:26%">關鍵設備</th><th style="width:22%">成熟度與供應鏈</th><th style="width:16%" class="ctr">時程定位</th><th>對投資方的意義</th></tr></thead>
-          <tbody>
-            <tr><td><b>① 415 VAC</b></td><td>MV 變壓器、LV MSB、AC UPS、PDU</td><td>完全成熟</td><td class="ctr"><span class="chip grey">現況</span></td><td>台灣既有機房的標準配置</td></tr>
-            <tr><td><b>② 白區改造</b></td><td>LV Rectifier（整流器移出機櫃）</td><td>可取得</td><td class="ctr"><span class="chip amber">現在可做</span></td><td><b>改造衝擊最小</b>，但多一級轉換，非端到端最佳解</td></tr>
-            <tr class="hl-row"><td><b>③ 混合配電</b></td><td>設施級 AC/DC 整流器（&lt;600 VAC 輸入，單串約 1.5 MVA，可經共同 DC bus 並聯，<b>效率約 99%</b>）</td><td><b>已廣用於 BESS 與再生能源</b></td><td class="ctr"><span class="chip teal">1–3 年</span></td><td>集中式 AC UPS 被取代；<b>現地發電與 BESS 成為主架構</b></td></tr>
-            <tr class="hl-row"><td><b>④ 中壓直轉</b></td><td>MV 整流器（35 kV→800 VDC、單機 7.5 MVA、<b>效率 ≥98.5%</b>）或 SST</td><td>MV 整流器在礦業、電解、鐵路、電網級儲能<b>已成熟、供應鏈就緒</b>；<b>SST 在多 MW 級的整流模組可靠度與熱／電應力管理仍有挑戰</b></td><td class="ctr"><span class="chip coral"><b>3–5 年</b></span></td><td>免除 480 VAC 低壓層。<b>SST 為業界共同開發中，不宜列入近期承諾</b></td></tr>
-          </tbody>
-        </table>
+    <div class="two-col" style="grid-template-columns:1.08fr .92fr;gap:18px">
+      <div class="fig" style="padding:0;overflow:hidden;background:#fff">
+        <img src="assets/nvidia-800vdc-v2-deployment-options.png" alt="NVIDIA 800 VDC V2 白皮書 Figure 1：既有 AC、Power Rack、Power Center、DC Power Block 的彈性部署選項" style="display:block;width:100%;height:275px;object-fit:cover;object-position:top">
+        <div class="cap" style="padding:0 13px 11px">白皮書 Figure 1 原圖擷取：從既有 AC 到 A／B／C 的部署選項；選項可並存，不是強制的先後順序。</div>
       </div>
       <div style="display:flex;flex-direction:column;gap:12px">
-        <div class="card"><h3>17.5 MW 參考設計（白皮書）</h3>
-          <ul class="list" style="margin-top:6px;font-size:.86rem">
-            <li>五台 <b>3.5 MW MV 整流器</b>，採「<b>5-to-make-4</b>」冗餘，35 kVAC → 800 VDC</li>
-            <li>接入 <b>5,000 A 集中式 DC 配電盤</b></li>
-            <li>以 1,500 A busduct 或液冷電纜配送，每路配 load-break contactor、固態斷路器與阻隔二極體</li>
-            <li>供應四座 <b>1.1 MW 運算機櫃</b>及 CDU 與 IT 支援設備</li>
-            <li>機櫃採 <b>1+1 冗餘饋線</b>來自獨立整流器；最不利情況下單台整流器可支撐 3.3 MW 運算負載</li>
-          </ul>
-        </div>
-        <div class="warn"><b>台灣落地的兩個未知數：</b><br>① MV 整流器（35 kV→800 VDC）在台灣的<b>可取得供應商尚未盤點</b><br>② <b>直接 MV 轉 DC 對台電併聯審查文件與保護協調的要求，目前沒有前例</b><br><br>在這兩項釐清前，不宜對客戶承諾第 ④ 階架構的時程。<span class="chip coral">待查證</span></div>
+        <div class="big-callout"><div class="label">V2 最重要的口徑修正</div><div class="answer">決策問題不是「第幾階」，而是「既有灰區能改到哪裡、哪個功率區塊要導入 800 VDC」。</div><div class="more">NVIDIA DSX 目前仍以 <b>480 VAC</b> 為標準；800 VDC 先聚焦 GPU Compute，以降低改造風險並保留既有 AC 設施投資。</div></div>
+        <div class="card teal"><h3>灰區工程的新交付物</h3><p><b>不是只交付整流器。</b>要一併定義 TRU／SST、DC busway、tap can、接地策略、IMD／RCM、斷路器、連接器連鎖、shunt-trip、FAT／SAT 與保護協調。這些才是設施側能否部署的責任邊界。</p></div>
       </div>
     </div>
+    <div class="table-wrap" style="margin-top:15px"><table><thead><tr><th style="width:15%">部署選項</th><th style="width:29%">白皮書定義／設備邊界</th><th style="width:18%">容量與配電特徵</th><th style="width:16%">V2 成熟度／時程</th><th>投資與工程判讀</th></tr></thead><tbody>
+      <tr><td><b>Existing</b><br><span class="chip grey">AC 基準</span></td><td>既有 DSX：<b>480 VAC</b> 由市電接入一路到 compute rack；機櫃內 power shelf 轉為低壓 DC。</td><td>100A AC power whip；<b>4-to-make-3</b> 機櫃供電冗餘。</td><td>目前預設、廣泛採用。</td><td>新建或改造案不可假設 AC 會消失；它是部署速度與既有認證的基準線。</td></tr>
+      <tr class="hl-row"><td><b>Option A</b><br><span class="chip amber">Power Rack</span></td><td>機櫃旁設置 Power Rack：以既有 AC 供電，在白區就地轉為 800 VDC，再用 125A DC whip 接 compute rack。</td><td>初期每 Power Rack 約 <b>660 kW</b>；12–24 條 100A AC whip；可含 BBU。</td><td><b>最快近期路徑</b>；白皮書稱 Q3 2026 進入生產。</td><td>適合既有 AC 機房／實驗室；代價是側車占用白區與 AC whip 管理，非長期最高密度解。</td></tr>
+      <tr class="hl-row"><td><b>Option B</b><br><span class="chip teal">Power Center</span></td><td>列／叢集級集中整流：AC → 800 VDC Power Center → DC busway／tap can → rack，保留既有灰區 AC 配電。</td><td>單座可調至約 <b>2 MW</b>；偏好 1250A feeder、125A tap can；MCCB 可作 Day-1 分支保護。</td><td>多 OEM 開發與認證中；白皮書預期最快 <b>Q3 2027</b>。</td><td>適合選定叢集與改造場；必須提早鎖定 DC busway、tap can、保護協調與維修方法。</td></tr>
+      <tr><td><b>Option C</b><br><span class="chip blue">DC Power Block</span></td><td>資料廳級高密度 DC Block：MVAC 進入、降壓變壓器＋LV 整流（TRU 或其他 AC/DC），輸出 800 VDC switchboard／busway。</td><td>目標 <b>4.8 MW</b> power block；可採 4+1 catcher／DC STS；20 MW DU＝4 個 scalable units。</td><td>面向未來超高密度與 native 800 VDC rack；未給定量產日期。</td><td>適合新建大規模 AIDC 的模組化／戶外預製規劃；TRU 是較務實的約 5MW 等級方案。</td></tr>
+      <tr><td><b>Option C Next-Gen</b><br><span class="chip coral">MV Direct</span></td><td>直接 <b>34.5 kVAC → 800 VDC</b> 的未來 power block，主要仰賴高壓 SST 等技術，省去中間 LV 轉換段。</td><td>未來可朝 <b>10 MW+</b> block 擴大；可整合 BESS、再生能源與 DC microgrid。</td><td><b>研究／生態系路線</b>；白皮書預期次世代 SST 朝 2029 推進。</td><td>可列長期選址與介面假設，<b>不可當成近期保證規格或施工時程</b>。</td></tr>
+    </tbody></table></div>
+    <div class="two-col" style="grid-template-columns:1fr 1fr;gap:14px;margin-top:14px">
+      <div class="card"><h3>V2 對原「四階段」說法的修正</h3><p><b>刪除：</b>「低壓 AC 必然一路縮到消失」與通用的 1–3／3–5 年時程。<br><b>改為：</b>AC 與 DC 可長期共存；A 是快速導入、B 是叢集化、C 是資料廳級擴展；MV Direct 僅為 C 的下一代研究方向。</p></div>
+      <div class="warn"><b>開發／投資前的四份必備文件：</b><br>① AC 或 800VDC 的目標 workload／rack density<br>② 接地方案與 IMD／RCM／arc-fault／SSCB 或 MCCB 選型<br>③ TRU／SST／busway／tap can 的供應與認證狀態<br>④ 從 MVAC 到 GPU 的模擬、FAT、SAT、併網與保護協調責任表</div>
+    </div>
   </div>
-  <div class="slide-foot"><div>來源：NVIDIA《800 VDC Architecture for Next-Generation AI Infrastructure》白皮書 Figure 10 與設施側章節（2025）</div><div class="pageno">4.2</div></div>
+  <div class="slide-foot"><div>來源：NVIDIA〈800 VDC Architecture: Industry Alignment &amp; Execution〉V2（2026），Fig. 1、pp. 7–23、24–34。時間點與設備成熟度均為白皮書敘述，非進能服對外供貨承諾。</div><div class="pageno">4.2</div></div>
 </section>
 
 <!-- 4.3 -->
